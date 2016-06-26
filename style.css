@@ -147,6 +147,7 @@ section .content{ padding:2% 5%;}
 article{ position:absolute; left:0; bottom:0; width:100%; height:calc(100% - 3.75rem); overflow:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; background-color:rgba(3,189,208,.8); z-index:2000;
     -webkit-transition:-webkit-transform .5s ease-in-out;
     -webkit-transform:translateY(100%);
+    -webkit-backdrop-filter:saturate(180%) blur(10px);
 }
 article.active{
     -webkit-transform:translateY(0);
