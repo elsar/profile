@@ -69,7 +69,7 @@ p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .tx_c{ text-align:center;}
 .vt_m{ vertical-align:middle;}
 
-.device{ height:41rem; background-color:#fff; box-shadow:#beebff 0 0 10px 0}
+.device{ position:relative; height:41rem; background-color:#fff; box-shadow:#beebff 0 0 10px 0}
 .device .hd{ position:fixed; width:100%; left:0; top:0; z-index:1000; background-color:#03bdd0;}
 .device .hd .tit{ color:#fff; font-size:1.25rem; line-height:2.5rem; display:block; text-align:center;}
 .device .hd a{ display:block; line-height:1em; padding:.625rem; color:#fff; font-size:1.25rem;}
@@ -79,7 +79,8 @@ p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .device .hd .lk_l{ float:left;}
 .device .hd .lk_r{ float:right;}
 
-section{ position:absolute; left:0; width:100%; height:100%; padding-top:2.5rem;
+section{ position:absolute; left:0; width:100%; height:100%; padding-top:2.5rem; overflow:hidden; overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
 }
@@ -122,8 +123,7 @@ section .content{ padding:2% 5%;}
     article{ overflow:hidden;}
     main .inner,
     article .inner{ padding:0 5%;}
-    .device .hd{ position:static;}
+    .device .hd{ position:absolute;}
     .device .bd{ position:relative;}
-    section{ padding-top:0;}
 }
 
