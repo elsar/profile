@@ -46,7 +46,7 @@
 .iconfont-circle-left:before {
     content: "\ea44";
 }
-html,body{ height:100%; overflow:hidden;}
+html,body,.container,main,main .inner{ height:100%; position:relative; overflow:hidden;}
 body{ margin:0; font:100%/1.5 Helvetica,Arial,Microsoft Yahei,sans-serif; background-color:#f0faff; color:#333;}
 img{ vertical-align:top; margin:0; max-width:100%}
 a{ text-decoration: none; outline: none; cursor: pointer; color:#333}
@@ -72,7 +72,7 @@ p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .tx_c{ text-align:center;}
 .vt_m{ vertical-align:middle;}
 
-.device{ position:relative; height:41rem; background-color:#fff; box-shadow:#beebff 0 0 10px 0; overflow:hidden;}
+.device{ position:relative; height:100%; background-color:#fff; box-shadow:#beebff 0 0 10px 0; overflow:hidden;}
 .device .hd{ position:fixed; width:100%; left:0; top:0; z-index:2001; background-color:#03bdd0; box-shadow:rgba(0,0,0,.2) 0 0 5px 0}
 .device .hd .tit{ color:#fff; font-size:1.25rem; line-height:3.75rem; display:block; text-align:center;}
 .device .hd .lk_l,
@@ -171,6 +171,7 @@ article .close:after{ content:''; position:absolute; left:50%; top:0; height:100
 }
 
 @media screen and (min-width:833px) {
+    html,body,.container,main,main .inner{ position:static; overflow:visible; height:auto}
     .container{ margin:2% auto;}
     main{ width:50%; float:left;}
     article{ width:auto; position:static; overflow:hidden; background-color:transparent;
@@ -181,6 +182,7 @@ article .close:after{ content:''; position:absolute; left:50%; top:0; height:100
     article .inner{ padding:0 5%;}
     article .inner{ padding-top:3.75rem}
     article .close{ display:none;}
+    .device{ height:41rem;}
     .device .hd{ position:absolute;}
     article h1{ color:#333}
     article p{ color:#888}
