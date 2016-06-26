@@ -174,9 +174,9 @@ article .close:after{ content:''; position:absolute; left:50%; top:0; height:100
     html,body,.container,main,main .inner{ position:static; overflow:visible; height:auto}
     .container{ margin:2% auto;}
     main{ width:50%; float:left;}
-    article{ width:auto; position:static; overflow:hidden; background-color:transparent;
+    article{ width:auto; position:static; height:auto; overflow:hidden; background-color:transparent;
         -webkit-transition:none;
-        -webkit-transform:translateY(0ƒ);
+        -webkit-transform:translateY(0);
     }
     main .inner,
     article .inner{ padding:0 5%;}
