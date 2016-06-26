@@ -299,13 +299,15 @@ elsa.R是我的主人<br>
 <script type="text/javascript" src="./jquery.min.js"></script>
 <script>
 $(function(){
-	$('.lk_l').on('click',function(){
+	var hastouch = 'ontouchstart' in window ,
+    tapend = hastouch?'touchend':'click';
+	$('.lk_l').on(tapend,function(){
 		var page = location.hash.replace('#','');
 		if(page == 'page1'){
 			$('.lk_l').css('visibility','hidden');
 		}
 	});
-	$('.drop .lk,.menu .lk,.next,.page1').on('click',function(){
+	$('.drop .lk,.menu .lk,.next,.page1').on(tapend,function(){
 		var page = $(this).data('href');
 		$('#dropdown').attr('checked',false);
 		location.hash = page;
@@ -326,7 +328,7 @@ $(function(){
 		$('article').addClass('active');
 		location.hash = 'page1';
 	}
-	$('article .close').on('click',function(){
+	$('article .close').on(tapend,function(){
 		$('article').removeClass('active');
 	});
 })
