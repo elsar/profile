@@ -16,21 +16,21 @@
 	<div class="inner">
 		<div class="device">
 			<div class="hd clearfix tx_c">
-				<a href="javascript:history.back(-1);" class="lk_l"><i class="dis_b iconfont-circle-left"></i></a>
+				<a href="javascript:history.back(-1);" class="lk_l" style="visibility:hidden"><i class="dis_b iconfont-circle-left"></i></a>
 				<input type="checkbox" id="dropdown" />
-				<label for="dropdown" class="lk_r"><i class="dis_b iconfont-menu"></i></label>
+				<label for="dropdown" id="lk_r" class="lk_r"><i class="dis_b iconfont-menu"></i></label>
 				<ul class="drop">
-					<li class="item"><a href="javascript:;" class="lk"><i class="iconfont-home"></i><span class="vt_m">欢迎页</span></a></li>
-					<li class="item"><a href="javascript:;" class="lk"><i class="iconfont-profile"></i><span class="vt_m">基本信息</span></a></li>
-					<li class="item"><a href="javascript:;" class="lk"><i class="iconfont-office"></i><span class="vt_m">工作过往</span></a></li>
-					<li class="item"><a href="javascript:;" class="lk"><i class="iconfont-briefcase"></i><span class="vt_m">项目经验</span></a></li>
-					<li class="item"><a href="javascript:;" class="lk"><i class="iconfont-bulb"></i><span class="vt_m">思考沉淀</span></a></li>
+					<li class="item"><a href="javascript:;" data-href="page1" class="lk"><i class="iconfont-home"></i><span class="vt_m">欢迎页</span></a></li>
+					<li class="item"><a href="javascript:;" data-href="page3" class="lk"><i class="iconfont-profile"></i><span class="vt_m">基本信息</span></a></li>
+					<li class="item"><a href="javascript:;" data-href="page4" class="lk"><i class="iconfont-office"></i><span class="vt_m">工作过往</span></a></li>
+					<li class="item"><a href="javascript:;" data-href="page5" class="lk"><i class="iconfont-briefcase"></i><span class="vt_m">项目经验</span></a></li>
+					<li class="item"><a href="javascript:;" data-href="page6" class="lk"><i class="iconfont-bulb"></i><span class="vt_m">思考沉淀</span></a></li>
 				</ul>
 				<span class="tit">Menu</span>
 			</div>
 			<div class="bd">
 
-				<section class="page1" style="display:none">
+				<section class="page1">
 					<div class="content">
 						<h1>Welcome</h1>
 						<p class="desc"><span class="ent">戳</span></p>
@@ -44,16 +44,16 @@
 					<div class="content">
 						<ul class="menu">
 							<li class="item">
-								<a href="javascript:;" class="lk"><i class="iconfont-profile"></i><span class="vt_m">基本 Information</span></a>
+								<a href="javascript:;" data-href="page3" class="lk"><i class="iconfont-profile"></i><span class="vt_m">基本 Information</span></a>
 							</li>
 							<li class="item">
-								<a href="javascript:;" class="lk"><i class="iconfont-office"></i><span class="vt_m">过往 History</span></a>
+								<a href="javascript:;" data-href="page4" class="lk"><i class="iconfont-office"></i><span class="vt_m">过往 History</span></a>
 							</li>
 							<li class="item">
-								<a href="javascript:;" class="lk"><i class="iconfont-briefcase"></i><span class="vt_m">经验 Experience</span></a>
+								<a href="javascript:;" data-href="page5" class="lk"><i class="iconfont-briefcase"></i><span class="vt_m">经验 Experience</span></a>
 							</li>
 							<li class="item">
-								<a href="javascript:;" class="lk"><i class="iconfont-bulb"></i><span class="vt_m">思考 Thinking</span></a>
+								<a href="javascript:;" data-href="page6" class="lk"><i class="iconfont-bulb"></i><span class="vt_m">思考 Thinking</span></a>
 							</li>
 						</ul>
 					</div>
@@ -191,7 +191,7 @@
 					</div>
 				</section>
 
-				<section class="page6">
+				<section class="page6" style="display:none">
 					<div class="topic">
 						<h2>思考沉淀 <span class="tx_16">Thinking</span></h2>
 					</div>
@@ -235,7 +235,33 @@
 <script type="text/javascript" src="http://mat1.gtimg.com/www/mb/mv/js/jquery.min.js"></script>
 <script>
 $(function(){
-	
+	$('body').on('click',function(event){
+	});
+	$('#lk_r').on('click',function(event){
+	});
+	$('.lk_l').on('click',function(){
+		var page = location.hash.replace('#','');
+		if(page == 'page1'){
+			$('.lk_l').css('visibility','hidden');
+		}
+	});
+	$('.drop .lk,.menu .lk').on('click',function(){
+		var page = $(this).data('href');
+		$('#dropdown').attr('checked',false);
+		location.hash = page;
+	});
+	window.onhashchange = function(){
+		var page = location.hash.replace('#','');
+		$('section').hide();
+		$('.'+page).show();
+		var bk = history.length;
+		if(bk != 0){
+			$('.lk_l').css('visibility','visible');
+		}
+	}
+	window.onload = function(){
+		location.hash = 'page1';
+	}
 })
 </script>
 </body>
