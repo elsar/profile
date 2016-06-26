@@ -95,6 +95,16 @@ section .content{ padding:2% 5%;}
 
 .banner img{ width:100%;}
 
+.vertical{ position:relative; height:100%;}
+.vertical:before{ position:absolute; content:''; left:1rem; margin-left:-1px; width:2px; height:100%; top:0; background-color:#03bdd0;
+    -webkit-transform:scaleX(.5);
+    transform:scaleX(.5);
+}
+.vertical .item{ position:relative;}
+.vertical .c1{ float:left; padding-top:.5rem; width:2rem; text-align:center;}
+.vertical .c1 .dot{ display:inline-block; vertical-align:top; width:.75rem; height:.75rem; border-radius:50%; background-color:#03bdd0;}
+.vertical .c2{ overflow:hidden;}
+
 @media screen and (min-width:833px) {
     .container{ margin:2% auto;}
     main{ width:50%; float:left;}
