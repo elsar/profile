@@ -30,7 +30,7 @@
 			</div>
 			<div class="bd">
 
-				<section class="page1">
+				<section class="page1" data-href="page2">
 					<div class="content">
 						<h1>Welcome</h1>
 						<p class="desc"><span class="ent">戳</span></p>
@@ -91,7 +91,7 @@
 								</div>
 							</li>
 							<li class="item clearfix">
-								<div class="c1 c_last"><a href="javascript:;" class="next tx_20">下一项</a></div>
+								<div class="c1 c_last"><a data-href="page4" href="javascript:;" class="next tx_20">下一项</a></div>
 							</li>
 						</ul>
 					</div>
@@ -140,7 +140,7 @@
 								</div>
 							</li>
 							<li class="item clearfix">
-								<div class="c1 c_last"><a href="javascript:;" class="next tx_20">下一项</a></div>
+								<div class="c1 c_last"><a data-href="page5" href="javascript:;" class="next tx_20">下一项</a></div>
 							</li>
 						</ul>
 					</div>
@@ -185,7 +185,7 @@
 								</div>
 							</li>
 							<li class="item clearfix">
-								<div class="c1 c_last"><a href="javascript:;" class="next tx_20">下一项</a></div>
+								<div class="c1 c_last"><a data-href="page6" href="javascript:;" class="next tx_20">下一项</a></div>
 							</li>
 						</ul>
 					</div>
@@ -224,9 +224,40 @@
 	</div>
 </main>
 
-<article style="display:none">
+<article>
+	<a href="javascript:;" class="close"></a>
 	<div class="inner">
-		<h2>Hello</h2>
+
+		<div class="pagecontent page1_content" style="display:block">
+			<h1>Hello</h1>
+			<p>我是一份交互设计师的求职简历1，</p>
+		</div>
+
+		<div class="pagecontent page2_content" style="display:none">
+			<h1>Hello</h1>
+			<p>我是一份交互设计师的求职简历2，</p>
+		</div>
+
+		<div class="pagecontent page3_content" style="display:none">
+			<h1>Hello</h1>
+			<p>我是一份交互设计师的求职简历3，</p>
+		</div>
+
+		<div class="pagecontent page4_content" style="display:none">
+			<h1>Hello</h1>
+			<p>我是一份交互设计师的求职简历4，</p>
+		</div>
+
+		<div class="pagecontent page5_content" style="display:none">
+			<h1>Hello</h1>
+			<p>我是一份交互设计师的求职简历5，</p>
+		</div>
+
+		<div class="pagecontent page6_content" style="display:none">
+			<h1>Hello</h1>
+			<p>我是一份交互设计师的求职简历6，</p>
+		</div>
+
 	</div>
 </article>
 
@@ -245,7 +276,7 @@ $(function(){
 			$('.lk_l').css('visibility','hidden');
 		}
 	});
-	$('.drop .lk,.menu .lk').on('click',function(){
+	$('.drop .lk,.menu .lk,.next,.page1').on('click',function(){
 		var page = $(this).data('href');
 		$('#dropdown').attr('checked',false);
 		location.hash = page;
@@ -258,10 +289,16 @@ $(function(){
 		if(bk != 0){
 			$('.lk_l').css('visibility','visible');
 		}
+		$('.pagecontent').hide();
+		$('.'+page+'_content').show();
+		$('article').addClass('active');
 	}
 	window.onload = function(){
 		location.hash = 'page1';
 	}
+	$('article .close').on('click',function(){
+		$('article').removeClass('active');
+	});
 })
 </script>
 </body>

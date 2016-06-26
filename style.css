@@ -72,8 +72,8 @@ p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .tx_c{ text-align:center;}
 .vt_m{ vertical-align:middle;}
 
-.device{ position:relative; height:41rem; background-color:#fff; box-shadow:#beebff 0 0 10px 0}
-.device .hd{ position:fixed; width:100%; left:0; top:0; z-index:1000; background-color:#03bdd0;}
+.device{ position:relative; height:41rem; background-color:#fff; box-shadow:#beebff 0 0 10px 0; overflow:hidden;}
+.device .hd{ position:fixed; width:100%; left:0; top:0; z-index:2001; background-color:#03bdd0; box-shadow:rgba(0,0,0,.2) 0 0 5px 0}
 .device .hd .tit{ color:#fff; font-size:1.25rem; line-height:3.75rem; display:block; text-align:center;}
 .device .hd .lk_l,
 .device .hd .lk_r{ position:relative; display:block; padding:1rem; border-right:#03bdd0 1px solid; border-left:#03bdd0 1px solid; color:#fff; font-size:1.75rem;}
@@ -95,7 +95,7 @@ section{ position:absolute; left:0; width:100%; height:100%; padding-top:3.75rem
 section .content{ padding:2% 5%;}
 
 .page1 h1{ margin-top:13rem; line-height:1.1em; font-size:3rem; text-align:center;}
-.page1 p.desc{ margin:0 20%; text-align:right; font-size:1.25rem;}
+.page1 p.desc{ margin:1rem 20% 0; text-align:center; font-size:1.25rem;}
 .page1 .ent{ display:inline-block; vertical-align:top; width:3rem; height:3rem; border-radius:50%; text-align:center; line-height:3rem;}
 
 .menu .item{ font-size:1rem; border-top:#d0d0d0 1px dotted;}
@@ -135,6 +135,7 @@ section .content{ padding:2% 5%;}
 .drop .item:first-child .lk{ border-top:none}
 .drop .lk:hover,
 .drop .lk:active{ background-color:#f9f9f9}
+.drop .lk i{ color:#03bdd0}
 #dropdown{ position:absolute; visibility:hidden; left:-9999em;}
 #dropdown:checked ~ .drop{ max-height:20rem}
 #dropdown:checked ~ .lk_r{ background-color:#fff; color:#03bdd0;}
@@ -143,12 +144,45 @@ section .content{ padding:2% 5%;}
     transform:rotate(90deg);
 }
 
+article{ position:absolute; left:0; bottom:0; width:100%; height:calc(100% - 3.75rem); overflow:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; background-color:rgba(3,189,208,.8); z-index:2000;
+    -webkit-transition:-webkit-transform .5s ease-in-out;
+    -webkit-transform:translateY(100%);
+}
+article.active{
+    -webkit-transform:translateY(0);
+}
+article h1,
+article p{ color:#fff}
+article .inner{ padding:3.75rem 5% 0;}
+article .close{ position:absolute; right:1rem; top:1rem; width:2rem; height:2rem;
+    -webkit-transform:rotate(45deg);
+}
+article .close:before{ content:''; position:absolute; left:0; top:50%; width:100%; height:2px; margin-top:-1px; background:#fff;}
+article .close:after{ content:''; position:absolute; left:50%; top:0; height:100%; width:2px; margin-left:-1px; background:#fff;}
+
+.pagecontent{
+    -webkit-animation:pagecontent .5s ease-in-out 1;
+    -webkit-animation-fill-mode:both;
+    -webkit-animation-delay:.5s;
+}
+@-webkit-keyframes pagecontent{
+    0%{ -webkit-transform:translateX(-50%); opacity:0}
+    100%{ -webkit-transform:translateX(0); opacity:1}
+}
+
 @media screen and (min-width:833px) {
     .container{ margin:2% auto;}
     main{ width:50%; float:left;}
-    article{ overflow:hidden;}
+    article{ width:auto; position:static; overflow:hidden; background-color:transparent;
+        -webkit-transition:none;
+        -webkit-transform:translateY(0ƒ);
+    }
     main .inner,
     article .inner{ padding:0 5%;}
+    article .inner{ padding-top:3.75rem}
+    article .close{ display:none;}
     .device .hd{ position:absolute;}
+    article h1{ color:#333}
+    article p{ color:#888}
 }
 
