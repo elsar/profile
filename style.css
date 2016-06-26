@@ -153,7 +153,7 @@ article.active{
 }
 article h1,
 article p{ color:#fff}
-article .inner{ padding:3.75rem 5% 0;}
+article .inner{ padding:1rem 5% 0;}
 article .close{ position:absolute; right:1rem; top:1rem; width:2rem; height:2rem;
     -webkit-transform:rotate(45deg);
 }
