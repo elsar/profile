@@ -124,6 +124,5 @@ section .content{ padding:2% 5%;}
     main .inner,
     article .inner{ padding:0 5%;}
     .device .hd{ position:absolute;}
-    .device .bd{ position:relative;}
 }
 
