@@ -64,6 +64,8 @@ p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .tx_12{ font-size:.75rem}
 .tx_14{ font-size:.875rem}
 .tx_16{ font-size:1rem}
+.tx_18{ font-size:1.125rem}
+.tx_20{ font-size:1.25rem}
 .tx_c{ text-align:center;}
 .vt_m{ vertical-align:middle;}
 
@@ -107,7 +109,7 @@ section .content{ padding:2% 5%;}
 .vertical .c1 .dot{ display:inline-block; vertical-align:top; width:.75rem; height:.75rem; border-radius:50%; background-color:#03bdd0;}
 .vertical .c2{ overflow:hidden; position:relative; top:-.4em}
 .vertical .c_last{ width:100%; text-align:left;}
-.vertical .c_last .next{ background-color:#fff; border:#03bdd0 1px solid; color:#03bdd0; padding:.2rem .5rem; vertical-align:top; display:inline-block; border-radius:4px}
+.vertical .c_last .next{ background-color:#03bdd0; color:#fff; padding:.3rem 1rem; vertical-align:top; display:inline-block; border-radius:4px}
 .vertical .c_last .next:active{
     -webkit-filter:brightness(.9);
 }
