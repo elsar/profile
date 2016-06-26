@@ -49,7 +49,10 @@
 
 body{ margin:0; font:100%/1.5 Helvetica,Arial,Microsoft Yahei,sans-serif; background-color:#f0faff; color:#333;}
 img{ vertical-align:top; margin:0; max-width:100%}
-a:link{ text-decoration:none; color:#333;}
+a{ text-decoration: none; outline: none; cursor: pointer; color:#333}
+a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
+a:hover{ text-decoration:none;}
+a:active{ background:none;}
 .clearfix:after{ content:''; clear:both; display:block;}
 .clearfix{ zoom:1;}
 .dis_b{ display:block;}
@@ -130,7 +133,8 @@ section .content{ padding:2% 5%;}
 .drop .item:last-child{ border-bottom:#03bdd0 1px solid;}
 .drop .lk{ display:block; padding:.8rem .5rem; margin:0 .5rem; border-top:#ddd 1px dotted}
 .drop .item:first-child .lk{ border-top:none}
-.drop .lk:hover{ background-color:#f9f9f9}
+.drop .lk:hover,
+.drop .lk:active{ background-color:#f9f9f9}
 #dropdown{ position:absolute; visibility:hidden; left:-9999em;}
 #dropdown:checked ~ .drop{ max-height:20rem}
 #dropdown:checked ~ .lk_r{ background-color:#fff; color:#03bdd0;}
