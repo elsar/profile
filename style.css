@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'iconfont';
+    src:    url('fonts/iconfont.eot?bo2nbg');
+    src:    url('fonts/iconfont.eot?bo2nbg#iefix') format('embedded-opentype'),
+        url('fonts/iconfont.ttf?bo2nbg') format('truetype'),
+        url('fonts/iconfont.woff?bo2nbg') format('woff'),
+        url('fonts/iconfont.svg?bo2nbg#iconfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="iconfont-"], [class*=" iconfont-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'iconfont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align:middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont-bulb:before {
+    content: "\e900";
+}
+.iconfont-home:before {
+    content: "\e901";
+}
+.iconfont-office:before {
+    content: "\e903";
+}
+.iconfont-profile:before {
+    content: "\e923";
+}
+.iconfont-briefcase:before {
+    content: "\e9ae";
+}
+.iconfont-menu:before {
+    content: "\e9bd";
+}
+.iconfont-circle-left:before {
+    content: "\ea44";
+}
+
+body{ margin:0; font:100%/1.5 Helvetica,Arial,Microsoft Yahei,sans-serif; background-color:#f0faff; color:#333;}
+img{ vertical-align:top; margin:0; max-width:100%}
+a:link{ text-decoration:none; color:#333;}
+.clearfix:after{ content:''; clear:both; display:block;}
+.clearfix{ zoom:1;}
+.dis_b{ display:block;}
+p,ul,li,h1,h2,h3,h4,h5,h6{ margin:0; font-weight:normal;}
+ul,li{ list-style:none; padding:0;}
+.container{ max-width:833px;}
+h1{ font-size:2rem; line-height:1.75em}
+h2{ font-size:1.5rem;}
+h3{ font-size:1.2rem;}
+p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
+.c_t2{ color:#c4c4c4}
+.tx_12{ font-size:.75rem}
+.tx_14{ font-size:.875rem}
+.tx_16{ font-size:1rem}
+.tx_c{ text-align:center;}
+.vt_m{ vertical-align:middle;}
+
+.device{ height:41rem; background-color:#fff; box-shadow:#beebff 0 0 10px 0}
+.device .hd{ position:fixed; width:100%; left:0; top:0; z-index:1000; background-color:#03bdd0;}
+.device .hd .tit{ color:#fff; font-size:1.25rem; line-height:2.5rem; display:block; text-align:center;}
+.device .hd a{ display:block; line-height:1em; padding:.625rem; color:#fff; font-size:1.25rem;}
+.device .hd a:active{
+    -webkit-filter:brightness(.9);
+}
+.device .hd .lk_l{ float:left;}
+.device .hd .lk_r{ float:right;}
+
+section{ position:absolute; left:0; width:100%; height:100%; padding-top:2.5rem;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+section .content{ padding:2% 5%;}
+
+.page1 h1{ margin-top:13rem; line-height:1.1em; font-size:3rem; text-align:center;}
+.page1 p.desc{ margin:0 20%; text-align:right; font-size:1.25rem;}
+.page1 .ent{ display:inline-block; vertical-align:top; width:3rem; height:3rem; border-radius:50%; text-align:center; line-height:3rem;}
+
+.menu .item{ font-size:1.125rem; border-top:#d0d0d0 1px dotted;}
+.menu .item:first-child{ border-top:none}
+.menu .item .lk{ display:block; padding:1rem 0;}
+.menu .item .vt_m{ margin-left:1rem;}
+.menu .item i{ color:#03bdd0}
+
+.banner img{ width:100%;}
+
+@media screen and (min-width:833px) {
+    .container{ margin:2% auto;}
+    main{ width:50%; float:left;}
+    article{ overflow:hidden;}
+    main .inner,
+    article .inner{ padding:0 5%;}
+    .device .hd{ position:static;}
+    .device .bd{ position:relative;}
+    section{ padding-top:0;}
+}
+
