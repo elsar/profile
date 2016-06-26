@@ -87,7 +87,7 @@ section .content{ padding:2% 5%;}
 .page1 p.desc{ margin:0 20%; text-align:right; font-size:1.25rem;}
 .page1 .ent{ display:inline-block; vertical-align:top; width:3rem; height:3rem; border-radius:50%; text-align:center; line-height:3rem;}
 
-.menu .item{ font-size:1.125rem; border-top:#d0d0d0 1px dotted;}
+.menu .item{ font-size:1rem; border-top:#d0d0d0 1px dotted;}
 .menu .item:first-child{ border-top:none}
 .menu .item .lk{ display:block; padding:1rem 0;}
 .menu .item .vt_m{ margin-left:1rem;}
