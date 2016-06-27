@@ -122,7 +122,7 @@ section .content{ padding:2% 5%;}
 .vertical .c_last .next:active{
     -webkit-filter:brightness(.9);
 }
-.vertical .item .lk{ color:#46afce}
+.vertical .item .lk{ color:#3cb9c3}
 
 .topic{ padding:5%; background-color:#f0f0f0}
 
