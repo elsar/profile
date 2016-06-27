@@ -125,7 +125,7 @@ section .content{ padding:2% 5%;}
 
 .topic{ padding:5%; background-color:#f0f0f0}
 
-.drop{ max-height:0; overflow:hidden; width:100%; position:absolute; right:0; top:3.75rem; font-size:.875rem; background-color:#fff; z-index:999; color:#333;
+.drop{ max-height:0; overflow:hidden; width:100%; position:absolute; right:0; top:3.75rem; background-color:#fff; z-index:999; color:#333;
     -webkit-transition:all .2s ease-in-out;
 }
 .drop .item{ border-left:#03bdd0 1px solid; border-right:#03bdd0 1px solid;}
@@ -135,7 +135,8 @@ section .content{ padding:2% 5%;}
 .drop .item:first-child .lk{ border-top:none}
 .drop .lk:hover,
 .drop .lk:active{ background-color:#f9f9f9}
-.drop .lk i{ color:#03bdd0}
+.drop .lk i{ font-size:.875rem; color:#03bdd0}
+.drop .lk span{ font-size:.875rem;}
 #dropdown{ position:absolute; visibility:hidden; left:-9999em;}
 #dropdown:checked ~ .drop{ max-height:20rem}
 #dropdown:checked ~ .lk_r{ background-color:#fff; color:#03bdd0;}
