@@ -95,7 +95,7 @@ section{ position:absolute; left:0; width:100%; height:100%; padding-top:3.75rem
 }
 section .content{ padding:2% 5%;}
 
-.page1{ background:url(./images/cover.png) center center no-repeat; background-size:cover;}
+.page1{ background:url(./images/cover.png) center center no-repeat; background-size:contain;}
 .page1 h1{ display:none; margin-top:10rem; line-height:1.1em; font-size:3rem; text-align:center;}
 .page1 p.desc{ display:none; margin:1rem 20% 0; text-align:center; font-size:1.25rem;}
 .page1 .ent{ display:inline-block; vertical-align:top; height:3rem; border-radius:50%; text-align:center; line-height:3rem;}
