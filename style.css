@@ -48,7 +48,7 @@
 }
 html,body,.container,main,main .inner{ height:100%; position:relative; overflow:hidden;}
 body{ margin:0; font:100%/1.5 Helvetica,Arial,Microsoft Yahei,sans-serif; background-color:#f0faff; color:#333;}
-img{ vertical-align:top; margin:0; max-width:100%}
+img,svg{ vertical-align:top; margin:0; max-width:100%}
 a{ text-decoration: none; outline: none; cursor: pointer; color:#333}
 a:link,label,body{ -webkit-tap-highlight-color:transparent; -webkit-focus-ring-color:transparent;}
 a:hover{ text-decoration:none;}
@@ -191,6 +191,41 @@ footer{ position:absolute; bottom:0; width:100%; left:0; clear:both; padding:1re
     100%{ -webkit-transform:translateX(0); opacity:1}
 }
 
+.layer{ position:fixed; z-index:3000; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,.7);
+    text-align:center;
+    display:none;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-animation:layer .3s ease-in-out 1;
+    -webkit-animation-fill-mode:both;
+}
+.layershow{
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+}
+@-webkit-keyframes layer{
+    0%{ opacity:0; -webkit-transform:scale(1.1);}
+    100%{ opacity:1; -webkit-transform:scale(1);}
+}
+.layer .item{margin:0 auto; display:block; text-align:center; width:100%; position:relative;
+}
+.layer img{ max-width:100%; background-color:#fff}
+
+.layer .close{ position:absolute; z-index:3000; right:1rem; top:1rem; width:3rem; height:3rem; border-radius:50%;
+    -webkit-transform:rotate(45deg);
+    background-color:rgba(0,0,0,.2);
+}
+.layer .close:before{ content:''; position:absolute; left:20%; top:50%; width:60%; height:.125rem; margin-top:-.0625rem; background:#fff;}
+.layer .close:after{ content:''; position:absolute; left:50%; top:20%; height:60%; width:.125rem; margin-left:-.0625rem; background:#fff;}
+
+.exp_zhongsou{ background:url(./images/logo_zhongsou.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+.exp_xingke{ background:url(./images/logo_xingke.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+.exp_no5{ background:url(./images/logo_no5.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+
 @media screen and (min-width:833px) {
     html,body,.container,main,main .inner{ position:static; overflow:visible; height:auto}
     .container{ margin:2% auto;}
@@ -210,5 +245,6 @@ footer{ position:absolute; bottom:0; width:100%; left:0; clear:both; padding:1re
     article p{ color:#888}
     article .c_t2{ color:#c4c4c4}
     footer{ position:static; background-color:transparent; box-shadow:none;}
+    .layer img{ max-width:60%}
 }
 

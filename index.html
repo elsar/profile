@@ -240,19 +240,19 @@
 						<ul class="vertical">
 							<li class="item clearfix">
 								<div class="c2">
-									<h3>用户基本情况分析</h3>
+									<h3><a href="javascript:;" data-href="i_weizhu1" class="tolayer">用户基本情况分析</a></h3>
 									<p class="tx_14">简单介绍通过调研得出的基本调研数据</p>
 								</div>
 							</li>
 							<li class="item clearfix">
 								<div class="c2">
-									<h3>产品框架</h3>
+									<h3><a href="javascript:;" data-href="i_weizhu2" class="tolayer">产品框架</a></h3>
 									<p class="tx_14">目前基本功能框架</p>
 								</div>
 							</li>
 							<li class="item clearfix">
 								<div class="c2">
-									<h3>部分产品交互稿</h3>
+									<h3><a href="javascript:;" data-href="i_weizhu3" class="tolayer">部分产品交互稿</a></h3>
 									<p class="tx_14">一些交互线框图</p>
 								</div>
 							</li>
@@ -281,7 +281,7 @@
 							</li>
 							<li class="item clearfix">
 								<div class="c2">
-									<h3>一点那时候的作品</h3>
+									<h3><a href="javascript:;" data-href="zhongsou1" class="tolayer">一点那时候的作品</a></h3>
 									<p class="tx_14">其实我最大的作品是上面那个货，你点击那个看吧，设计到内容都是我做的。</p>
 								</div>
 							</li>
@@ -384,6 +384,9 @@
 			看似简单其实很丰富哦~<br>
 			我的主人从一个单纯只关心设计的呆萌二货，一点一点的看到了整个工作流程的全貌，并不断努力尝试着流程中的每个她能够触及的角色，一步一个脚印的努力做事，积极思考；<br>
 			8年涉足媒体、零售、信息服务、培训四个行业；探索了门户、电商、O2O、搜索、新闻客户端、B2B企业培训六个产品形式；经历运营策划、视觉设计、交互设计、产品设计四个工作岗位；从大WEB的PC时代到移动一统天下，H5开出漫天烟火的现在。</p>
+			<div class="mt15">
+				<img src="./images/bar.svg" alt="">
+			</div>
 		</div>
 
 		<div class="pagecontent page5_content" style="display:none">
@@ -444,17 +447,52 @@
 			客户端UI、管理后台、宣传物料等<br>
 			配合市场活动，写少量活动文案。</p>
 			<p class="tx_12 c_t2" style="margin-top:1rem">全国首个消费者忠诚度计划的智能手机客户端。星客作为一个基于智能手机客户端的全新活动平台，旨在于给广大消费者提供本地生活消费类的各种精彩活动。</p>
+			<p class="mt15">
+				<img data-href="xingke" class="tolayer" src="./images/xingke.png" alt="">
+			</p>
 		</div>
 
 		<div class="pagecontent exp_no5_content" style="display:none">
 			<h1>NO5时尚广场</h1>
 			<p class="tx_14">主要负责整站视觉设计、活动策划、文案。</p>
 			<p class="tx_12 c_t2" style="margin-top:1rem">No5时尚广场是中国领先的护肤、香水、健康、电视购物产品及资讯提供商。设有北京、上海、广州、杭州四个规模化的运营和客服、物流中心，现经营品牌200多个，5000多种商品在线销售。</p>
+			<p class="mt15">
+				<img data-href="no5" class="tolayer" src="./images/no5.png" alt="">
+			</p>
 		</div>
 
 	</div>
 	<a href="javascript:;" class="close"></a>
 </article>
+
+<div class="layer">
+	<a href="javascript:;" class="close"></a>
+
+	<div class="item i_weizhu1">
+		<img src="./images/i_weizhu1.svg" />
+	</div>
+
+	<div class="item i_weizhu2">
+		<img src="./images/i_weizhu2.png" />
+	</div>
+
+	<div class="item i_weizhu3">
+		<img src="./images/i_weizhu3.png" />
+	</div>
+
+	<div class="item zhongsou1">
+		<img src="./images/zhongsou1.png" />
+	</div>
+
+	<div class="item xingke">
+		<img src="./images/xingke.png" />
+	</div>
+
+	<div class="item no5">
+		<img src="./images/no5.png" />
+	</div>
+
+</div>
 
 <footer class="tx_c tx_12 c_t2">
 	任洁 Elsa. R. TEL: 15110297859
@@ -476,6 +514,16 @@ $(function(){
 	$('.drop .lk,.menu .lk,.next,.backindex,.page1,.vertical .lk').on(tapend,function(){
 		var page = $(this).data('href');
 		location.hash = page;
+	});
+	$('.tolayer').on(tapend,function(){
+		var href = $(this).data('href');
+		$('.layer .item').hide();
+		$('.layer .'+href).show();
+		$('.layer').addClass('layershow');
+	});
+	$('.layer .close').on(tapend,function(){
+		$('.layer .item').hide();
+		$('.layer').removeClass('layershow');
 	});
 	window.onhashchange = function(){
 		$('#dropdown').attr('checked',false);
