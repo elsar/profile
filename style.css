@@ -64,6 +64,7 @@ h2{ font-size:1.5rem;}
 h3{ font-size:1.2rem;}
 p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .c_t2{ color:#c4c4c4}
+.c_tw{ color:#fff}
 .tx_12{ font-size:.75rem}
 .tx_14{ font-size:.875rem}
 .tx_16{ font-size:1rem}
@@ -72,6 +73,9 @@ p{ color:#888; line-height:1.75em; font-size:1rem; text-align:justify;}
 .tx_c{ text-align:center;}
 .vt_m{ vertical-align:middle;}
 .mt15{ margin-top:.9375rem}
+.c3-legend-item{ fill:#fff!important}
+.btn_chart{ opacity:.5; display:inline-block; vertical-align:middle; margin:0 10px 10px 0; padding:4px 10px; background:#869791; color:#fff; border-radius:2em; font-size:.875rem;}
+.btn_chart.active{ opacity:1}
 
 .device{ position:relative; height:100%; background-color:#fff; box-shadow:#beebff 0 0 10px 0; overflow:hidden;}
 .device .hd{ position:fixed; width:100%; left:0; top:0; z-index:2001; background-color:#03bdd0; box-shadow:rgba(0,0,0,.2) 0 0 5px 0}
@@ -211,7 +215,7 @@ footer{ position:absolute; bottom:0; width:100%; left:0; clear:both; padding:1re
     0%{ opacity:0; -webkit-transform:scale(1.1);}
     100%{ opacity:1; -webkit-transform:scale(1);}
 }
-.layer .item{margin:0 auto; display:block; text-align:center; width:100%; position:relative;
+.layer .items{margin:0 auto; display:block; text-align:center; width:100%; max-height:100%; position:relative;
 }
 .layer img{ max-width:100%; background-color:#fff}
 
@@ -222,9 +226,12 @@ footer{ position:absolute; bottom:0; width:100%; left:0; clear:both; padding:1re
 .layer .close:before{ content:''; position:absolute; left:20%; top:50%; width:60%; height:.125rem; margin-top:-.0625rem; background:#fff;}
 .layer .close:after{ content:''; position:absolute; left:50%; top:20%; height:60%; width:.125rem; margin-left:-.0625rem; background:#fff;}
 
-.exp_zhongsou{ background:url(./images/logo_zhongsou.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+.exp_weizhu{ background:url(./images/logo_weizhu.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+.exp_zhongsou{ background:url(./images/logo_zhongsou.jpg) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
 .exp_xingke{ background:url(./images/logo_xingke.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
-.exp_no5{ background:url(./images/logo_no5.png) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+.exp_no5{ background:url(./images/logo_no5.jpg) calc(100% - 1rem) calc(100% - 1rem) no-repeat; background-size:6rem}
+
+.chart_content{ max-width:320px; margin:0 auto; padding:0 5%;}
 
 @media screen and (min-width:833px) {
     html,body,.container,main,main .inner{ position:static; overflow:visible; height:auto}
@@ -245,6 +252,6 @@ footer{ position:absolute; bottom:0; width:100%; left:0; clear:both; padding:1re
     article p{ color:#888}
     article .c_t2{ color:#c4c4c4}
     footer{ position:static; background-color:transparent; box-shadow:none;}
-    .layer img{ max-width:60%}
+    .layer img{ max-width:25%}
 }
 
